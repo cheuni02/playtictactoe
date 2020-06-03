@@ -1,3 +1,4 @@
+@web @tictactoe
 Feature: As a Dumbass
   I want to have the opportunity to play tic tac toe
   So I can have a peace of mind at least
