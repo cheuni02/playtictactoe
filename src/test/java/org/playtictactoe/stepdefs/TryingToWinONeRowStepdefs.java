@@ -31,6 +31,17 @@ public class TryingToWinONeRowStepdefs {
 
     @When("^I select (\\d+),(\\d+)$")
     public void iSelect(int arg0, int arg1) throws Throwable{
+        System.out.println(arg0+arg1);
+        if (arg0 == 0){
+            if (arg1 == 0){
+                tttPage.clickTopLeft();
+            }else{
+                tttPage.clickTop();
+            }
+        }else{
+            //other clicks
+        }
+        Thread.sleep(2000);
     }
 
     @Then("^Computer Would stop me at (\\d+),(\\d+)$")

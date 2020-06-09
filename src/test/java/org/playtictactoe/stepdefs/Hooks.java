@@ -14,9 +14,6 @@ public class Hooks {
         if (!initialized) {
             // initialize the driver
             driver = new ChromeDriver();
-            System.out.println("1");
-            System.out.println("2");
-            System.out.println("3");
             initialized = true;
         }
     }
@@ -24,25 +21,6 @@ public class Hooks {
     public WebDriver getDriver() {
         return driver;
     }
-
-
-
-//    @Before("@web")
-//    public void initWebdriver() throws Throwable {
-//        System.out.println("initialising hooks!...");
-//        driver = new ChromeDriver();
-////        driver = new FirefoxDriver();
-//    }
-
-//    @Before("@tictactoe")
-//    public void initTictactoePage() throws Throwable {
-//        tttPage = new TTTPage(driver);
-//    }
-//
-//    @Before("@tictactoe")
-//    public TTTPage getTttPage() {
-//        return tttPage;
-//    }
 
     @After(value = "@web")
     public void disposeWebDriver() throws Throwable {
