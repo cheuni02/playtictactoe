@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.playtictactoe.framework.BasePage;
 
 public class TTTPage extends BasePage {
+    private BasePage basePage;
 
     private static final String TICTACTOEURL = "https://playtictactoe.org/";
     private static final By board = By.className(".game .board");
@@ -19,6 +20,7 @@ public class TTTPage extends BasePage {
 
     public TTTPage(WebDriver driver) {
         super(driver);
+        basePage = new BasePage(driver);
     }
 
     public void navigateToGame() {
